@@ -59,7 +59,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(52, 38);
+            this.ClientSize = new System.Drawing.Size(63, 38);
             this.ControlBox = false;
             this.Controls.Add(this.lbl_Time);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
