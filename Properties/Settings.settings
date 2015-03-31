@@ -2,8 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PortalCounter.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="HotKey" Type="System.Char" Scope="User">
-      <Value Profile="(Default)">Q</Value>
+    <Setting Name="HotKey" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">9</Value>
     </Setting>
   </Settings>
 </SettingsFile>

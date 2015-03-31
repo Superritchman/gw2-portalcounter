@@ -21,7 +21,7 @@ namespace PortalCounter
 
         [STAThread]
         static void Main()
-        {
+        {            
             _hookID = SetHook(_proc);
             Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
@@ -47,7 +47,7 @@ namespace PortalCounter
             {
                 int vkCode = Marshal.ReadInt32(lParam);
 
-                if (hook && (Keys)vkCode == Keys.Q)
+                if (hook && (Keys)vkCode == PortalCounter.Properties.Settings.Default.HotKey)
                 {
                     mForm.startTimer();
                 }

@@ -12,22 +12,24 @@ namespace PortalCounter
 {
     public partial class Settings : Form
     {
-        private char newKey;
+        private Keys newKey;
 
         public Settings()
         {
             InitializeComponent();
+            this.lbl_DescOld.Text = "Old Key: " + PortalCounter.Properties.Settings.Default.HotKey;
         }
 
-        private void Settings_KeyPress(object sender, KeyPressEventArgs e)
+        private void Settings_KeyUp(object sender, KeyEventArgs e)
         {
-            newKey = e.KeyChar;
-            this.lbl_DescNew.Text = "New Key: " + Char.ToUpper(newKey);
+            newKey = e.KeyCode;
+            this.lbl_DescNew.Text = "New Key: " + e.KeyCode;
         }
 
         private void btn_Submit_Click(object sender, EventArgs e)
         {
-            PortalCounter.Properties.Settings.Default.HotKey = newKey;
+            if (!newKey.Equals(Keys.None))
+                PortalCounter.Properties.Settings.Default.HotKey = newKey;
             this.Close();
         }
 
@@ -40,5 +42,7 @@ namespace PortalCounter
         {
             Program.hook = false;
         }
+
+
     }
 }

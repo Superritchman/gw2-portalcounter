@@ -25,10 +25,10 @@ namespace PortalCounter.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Q")]
-        public char HotKey {
+        [global::System.Configuration.DefaultSettingValueAttribute("9")]
+        public global::System.Windows.Forms.Keys HotKey {
             get {
-                return ((char)(this["HotKey"]));
+                return ((global::System.Windows.Forms.Keys)(this["HotKey"]));
             }
             set {
                 this["HotKey"] = value;
