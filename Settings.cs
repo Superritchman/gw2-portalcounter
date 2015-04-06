@@ -30,6 +30,7 @@ namespace PortalCounter
         {
             if (!newKey.Equals(Keys.None))
                 PortalCounter.Properties.Settings.Default.HotKey = newKey;
+            PortalCounter.Properties.Settings.Default.InspIX = this.cb_inspIX.Checked;
             this.Close();
         }
 
@@ -42,7 +43,5 @@ namespace PortalCounter
         {
             Program.hook = false;
         }
-
-
     }
 }

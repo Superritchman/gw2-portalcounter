@@ -26,12 +26,12 @@ namespace PortalCounter
 
         // Some settings
         private const int S_LONGTIME = 60;
-        private const int S_SHORTTIME = 10;
 
         // timer states
         private const int T_TIMER_STOPPED = 0;
         private const int T_SHORT_TIMER = 1;
         private const int T_LONG_TIMER = 2;
+        private const int T_TIMER_EXPIRED = 3;
 
         private int timerstate = T_TIMER_STOPPED;
         private int tickTimer = S_LONGTIME;        
@@ -54,7 +54,7 @@ namespace PortalCounter
                 case T_LONG_TIMER:     // second portal (open to port)
                     timerstate = T_SHORT_TIMER;
                     this.ti_CountDown.Stop();
-                    tickTimer = S_SHORTTIME;
+                    tickTimer = PortalCounter.Properties.Settings.Default.InspIX ? 12 : 10;
                     this.ti_CountDown.Start();
                     break;
                 default:    // reset
@@ -68,19 +68,14 @@ namespace PortalCounter
 
         private void updateLabel()
         {
-            //Color.White;  Default - 60s
-            //Color.Red;    Default - 10s
-            //Color.Blue;   Open    - 10s
-            //Color.Purple; Open    - 5s
-
             // Short
             if (timerstate == T_SHORT_TIMER)
             {
                 // normal
                 if (tickTimer > 5)
-                    this.lbl_Time.ForeColor = Color.Blue;
+                    this.lbl_Time.ForeColor = Color.LightBlue;
                 else
-                    this.lbl_Time.ForeColor = Color.Purple;              
+                    this.lbl_Time.ForeColor = Color.MediumPurple;              
             }
             else
             {
@@ -89,7 +84,6 @@ namespace PortalCounter
                     this.lbl_Time.ForeColor = Color.White;
                 else
                     this.lbl_Time.ForeColor = Color.Red;
-
             }
 
             this.lbl_Time.Text = ""+tickTimer;
@@ -98,7 +92,11 @@ namespace PortalCounter
         private void timer1_Tick(object sender, EventArgs e)
         {
             if(--tickTimer < 0)
-                startTimer();
+            {
+                if (timerstate == T_LONG_TIMER)
+                    timerstate = T_TIMER_EXPIRED;
+                startTimer();                
+            }
             updateLabel();
         }
 
@@ -130,7 +128,7 @@ namespace PortalCounter
 
         private void MainForm_Deactivate(object sender, EventArgs e)
         {
-            this.lbl_Time.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_Time.BackColor = Color.Black;
             this.BringToFront();
         }
     }

@@ -3,7 +3,10 @@
   <Profiles />
   <Settings>
     <Setting Name="HotKey" Type="System.Windows.Forms.Keys" Scope="User">
-      <Value Profile="(Default)">9</Value>
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="InspIX" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

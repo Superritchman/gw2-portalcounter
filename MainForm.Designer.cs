@@ -35,15 +35,13 @@
             // 
             // lbl_Time
             // 
-            this.lbl_Time.AutoSize = true;
-            this.lbl_Time.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_Time.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbl_Time.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Time.ForeColor = System.Drawing.Color.White;
             this.lbl_Time.Location = new System.Drawing.Point(0, 0);
             this.lbl_Time.Margin = new System.Windows.Forms.Padding(0);
-            this.lbl_Time.MaximumSize = new System.Drawing.Size(0, 52);
             this.lbl_Time.Name = "lbl_Time";
-            this.lbl_Time.Size = new System.Drawing.Size(46, 34);
+            this.lbl_Time.Size = new System.Drawing.Size(140, 34);
             this.lbl_Time.TabIndex = 0;
             this.lbl_Time.Text = "60";
             this.lbl_Time.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
@@ -56,28 +54,31 @@
             // 
             // MainForm
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(63, 38);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(140, 50);
             this.ControlBox = false;
             this.Controls.Add(this.lbl_Time);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(40, 40);
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.Text = "Portal Counter";
             this.TopMost = true;
-            this.TransparencyKey = System.Drawing.SystemColors.Control;
+            this.TransparencyKey = System.Drawing.Color.Black;
             this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.Deactivate += new System.EventHandler(this.MainForm_Deactivate);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseUp);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

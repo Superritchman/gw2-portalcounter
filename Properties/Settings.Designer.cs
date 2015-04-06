@@ -25,13 +25,25 @@ namespace PortalCounter.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("9")]
+        [global::System.Configuration.DefaultSettingValueAttribute("8")]
         public global::System.Windows.Forms.Keys HotKey {
             get {
                 return ((global::System.Windows.Forms.Keys)(this["HotKey"]));
             }
             set {
                 this["HotKey"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool InspIX {
+            get {
+                return ((bool)(this["InspIX"]));
+            }
+            set {
+                this["InspIX"] = value;
             }
         }
     }
