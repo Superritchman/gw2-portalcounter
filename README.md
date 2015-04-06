@@ -1,4 +1,4 @@
-# gw2-portalcounter
+# PortalCounter for Guild Wars 2
 Minimalistic time counter for Guild Wars 2 mesmer portals.<br>
 
 ## What does PortalCounter do?
@@ -14,3 +14,5 @@ After you place your Portal Exit, the timer will restart with 10 seconds, so you
 <li>Right-Click on the time to exit PortalCounter
 </ol>
 
+You find a compiled version in subfolder 'Release' (or take this link)<br>
+https://github.com/Superritchman/gw2-portalcounter/raw/master/Release/PortalCounter.exe
