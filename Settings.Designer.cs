@@ -89,6 +89,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Settings";
+            this.ShowInTaskbar = false;
             this.Text = "Settings";
             this.TopMost = true;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Settings_FormClosed);

@@ -42,9 +42,10 @@
             this.lbl_Time.Location = new System.Drawing.Point(0, 0);
             this.lbl_Time.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Time.Name = "lbl_Time";
+            this.lbl_Time.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_Time.Size = new System.Drawing.Size(140, 34);
             this.lbl_Time.TabIndex = 0;
-            this.lbl_Time.Text = "60";
+            this.lbl_Time.Text = "60";            
             this.lbl_Time.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.lbl_Time.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseUp);
             // 
