@@ -16,13 +16,14 @@ namespace PortalCounter
         public Settings()
         {
             InitializeComponent();
-            this.lbl_DescOld.Text = "Old Key: " + PortalCounter.Properties.Settings.Default.HotKey;
+            Keys oldKey = PortalCounter.Properties.Settings.Default.HotKey;
+            this.lbl_DescOld.Text = "Old Key: " + normalizeKeyValue(oldKey);
         }
 
         private void Settings_KeyUp(object sender, KeyEventArgs e)
         {
             newKey = e.KeyCode;
-            this.lbl_DescNew.Text = "New Key: " + e.KeyCode;
+            this.lbl_DescNew.Text = "New Key: " + normalizeKeyValue(newKey);
         }
 
         private void btn_Submit_Click(object sender, EventArgs e)
@@ -31,6 +32,17 @@ namespace PortalCounter
                 PortalCounter.Properties.Settings.Default.HotKey = newKey;
             PortalCounter.Properties.Settings.Default.InspIX = this.cb_inspIX.Checked;
             this.Close();
+        }
+
+        private String normalizeKeyValue(Keys key)
+        {
+            String normString = key.ToString();
+            if (!String.IsNullOrEmpty(normString) && normString.Any(char.IsDigit))
+            {                
+                normString = normString.TrimStart('D');
+            }
+
+            return normString;
         }
 
         private void Settings_FormClosed(object sender, FormClosedEventArgs e)

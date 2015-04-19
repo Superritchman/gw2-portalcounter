@@ -59,6 +59,7 @@
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(177, 35);
             this.btn_Submit.TabIndex = 2;
+            this.btn_Submit.TabStop = false;
             this.btn_Submit.Text = "Ok";
             this.btn_Submit.UseVisualStyleBackColor = true;
             this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
@@ -70,14 +71,15 @@
             this.cb_inspIX.Name = "cb_inspIX";
             this.cb_inspIX.Size = new System.Drawing.Size(114, 22);
             this.cb_inspIX.TabIndex = 4;
+            this.cb_inspIX.TabStop = false;
             this.cb_inspIX.Text = "Inspiration IX";
             this.cb_inspIX.UseVisualStyleBackColor = true;
             // 
             // Settings
             // 
-            this.AcceptButton = this.btn_Submit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.ClientSize = new System.Drawing.Size(177, 127);
             this.Controls.Add(this.cb_inspIX);
             this.Controls.Add(this.btn_Submit);
