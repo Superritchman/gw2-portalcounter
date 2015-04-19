@@ -14,14 +14,19 @@ namespace PortalCounter
 {
     public partial class MainForm : Form
     {
-        // Drag n Drop
-        private const int WM_NCLBUTTONDOWN = 0xA1;
-        private const int HT_CAPTION = 0x2;
-
         [DllImportAttribute("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
+
+        [DllImport("user32.dll")]
+        static extern IntPtr GetForegroundWindow();
+        [DllImport("user32.dll")]
+        static extern int GetWindowText(IntPtr hWnd, StringBuilder text, int count);
+
+        // Drag n Drop
+        private const int WM_NCLBUTTONDOWN = 0xA1;
+        private const int HT_CAPTION = 0x2;
 
         // Some settings
         private const int S_LONGTIME = 60;
@@ -45,10 +50,14 @@ namespace PortalCounter
             switch (timerstate)
             {
                 case T_TIMER_STOPPED:    // first portal
-                    timerstate = T_LONG_TIMER;
-                    this.ti_CountDown.Stop();
-                    tickTimer = S_LONGTIME;
-                    this.ti_CountDown.Start();
+                    String winTitle = GetActiveWindowTitle();
+                    if ("Guild Wars 2".Equals(winTitle))
+                    {                        
+                        timerstate = T_LONG_TIMER;
+                        this.ti_CountDown.Stop();
+                        tickTimer = S_LONGTIME;
+                        this.ti_CountDown.Start();
+                    }
                     break;
                 case T_LONG_TIMER:     // second portal (open to port)
                     timerstate = T_SHORT_TIMER;
@@ -86,6 +95,19 @@ namespace PortalCounter
             }
 
             this.lbl_Time.Text = ""+tickTimer;
+        }
+
+        private string GetActiveWindowTitle()
+        {
+            const int nChars = 256;
+            StringBuilder Buff = new StringBuilder(nChars);
+            IntPtr handle = GetForegroundWindow();
+
+            if (GetWindowText(handle, Buff, nChars) > 0)
+            {
+                return Buff.ToString();
+            }
+            return null;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
