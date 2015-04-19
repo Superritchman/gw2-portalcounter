@@ -2,7 +2,7 @@
 Minimalistic time counter for Guild Wars 2 mesmer portals.<br>
 
 ## What does PortalCounter do?
-PortalCounter is a helpfull tool, which display a 60 second countdown if you set a portal.<br>
+PortalCounter is a helpfully tool, which display a 60 second countdown if you set a portal.<br>
 After you place your Portal Exit, the timer will restart with 10 seconds, so you will see how long the portal will be opened.
 
 ## How to use?
@@ -14,5 +14,5 @@ After you place your Portal Exit, the timer will restart with 10 seconds, so you
 <li>Right-Click on the time to exit PortalCounter
 </ol>
 
-You find a compiled version in subfolder 'Release' (or take this link)<br>
+You find a compiled version in sub-folder 'Release' (or take this link)<br>
 https://github.com/Superritchman/gw2-portalcounter/raw/master/Release/PortalCounter.exe
