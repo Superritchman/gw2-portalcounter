@@ -117,159 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_DescOld.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbl_DescOld.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 9</value>
-  </data>
   <data name="lbl_DescOld.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 13</value>
-  </data>
-  <data name="lbl_DescOld.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>60, 13</value>
   </data>
   <data name="lbl_DescOld.Text" xml:space="preserve">
-    <value>Old Key:</value>
-  </data>
-  <data name="&gt;&gt;lbl_DescOld.Name" xml:space="preserve">
-    <value>lbl_DescOld</value>
-  </data>
-  <data name="&gt;&gt;lbl_DescOld.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_DescOld.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_DescOld.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lbl_DescNew.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_DescNew.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 36</value>
+    <value>Vieux Key: </value>
   </data>
   <data name="lbl_DescNew.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
-  </data>
-  <data name="lbl_DescNew.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>78, 13</value>
   </data>
   <data name="lbl_DescNew.Text" xml:space="preserve">
-    <value>New Key: </value>
-  </data>
-  <data name="&gt;&gt;lbl_DescNew.Name" xml:space="preserve">
-    <value>lbl_DescNew</value>
-  </data>
-  <data name="&gt;&gt;lbl_DescNew.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_DescNew.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_DescNew.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btn_Submit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="btn_Submit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 90</value>
-  </data>
-  <data name="btn_Submit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 35</value>
-  </data>
-  <data name="btn_Submit.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="btn_Submit.Text" xml:space="preserve">
-    <value>Ok</value>
-  </data>
-  <data name="&gt;&gt;btn_Submit.Name" xml:space="preserve">
-    <value>btn_Submit</value>
-  </data>
-  <data name="&gt;&gt;btn_Submit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_Submit.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btn_Submit.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="cb_inspIX.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>Nouveau Key: </value>
   </data>
   <data name="cb_inspIX.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 64</value>
+    <value>14, 67</value>
   </data>
   <data name="cb_inspIX.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 17</value>
-  </data>
-  <data name="cb_inspIX.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>195, 17</value>
   </data>
   <data name="cb_inspIX.Text" xml:space="preserve">
-    <value>Inspiration</value>
+    <value>Enchantement temporel (Inspiration)</value>
   </data>
-  <data name="&gt;&gt;cb_inspIX.Name" xml:space="preserve">
-    <value>cb_inspIX</value>
-  </data>
-  <data name="&gt;&gt;cb_inspIX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cb_inspIX.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;cb_inspIX.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="cb_Language.Items" xml:space="preserve">
-    <value>en</value>
-  </data>
-  <data name="cb_Language.Items1" xml:space="preserve">
-    <value>de</value>
-  </data>
-  <data name="cb_Language.Items2" xml:space="preserve">
-    <value>es</value>
-  </data>
-  <data name="cb_Language.Items3" xml:space="preserve">
-    <value>fr</value>
-  </data>
-  <data name="cb_Language.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 6</value>
-  </data>
-  <data name="cb_Language.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 21</value>
-  </data>
-  <data name="cb_Language.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;cb_Language.Name" xml:space="preserve">
-    <value>cb_Language</value>
-  </data>
-  <data name="&gt;&gt;cb_Language.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cb_Language.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;cb_Language.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="il_Flags.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="il_Flags.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAs
-        CQAAAk1TRnQBSQFMAgEBBAEAAUwBAAFMAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CQAAAk1TRnQBSQFMAgEBBAEAAUABAAFAAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -311,28 +186,7 @@
         BgABARYAA///AAIACw==
 </value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>221, 125</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="&gt;&gt;il_Flags.Name" xml:space="preserve">
-    <value>il_Flags</value>
-  </data>
-  <data name="&gt;&gt;il_Flags.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>SettingsForm</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Paramètres</value>
   </data>
 </root>

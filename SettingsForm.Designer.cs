@@ -65,7 +65,13 @@
             // 
             // cb_Language
             // 
+            this.cb_Language.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cb_Language.FormattingEnabled = true;
+            this.cb_Language.Items.AddRange(new object[] {
+            resources.GetString("cb_Language.Items"),
+            resources.GetString("cb_Language.Items1"),
+            resources.GetString("cb_Language.Items2"),
+            resources.GetString("cb_Language.Items3")});
             resources.ApplyResources(this.cb_Language, "cb_Language");
             this.cb_Language.Name = "cb_Language";
             this.cb_Language.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cb_Language_DrawItem);

@@ -30,9 +30,11 @@ namespace PortalCounter
             {
                 case "de":
                 case "fr":
-                case "es": Properties.Settings.Default.Language = lang;
+                case "es": 
+                    Properties.Settings.Default.Language = lang;
                     break;
-                default: Properties.Settings.Default.Language = "en";
+                default: 
+                    Properties.Settings.Default.Language = "en";
                     break;
             }
             this.cb_Language.SelectedItem = Properties.Settings.Default.Language;
