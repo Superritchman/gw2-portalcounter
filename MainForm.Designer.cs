@@ -43,7 +43,7 @@
             this.lbl_Time.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Time.Name = "lbl_Time";
             this.lbl_Time.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_Time.Size = new System.Drawing.Size(50, 34);
+            this.lbl_Time.Size = new System.Drawing.Size(40, 30);
             this.lbl_Time.TabIndex = 0;
             this.lbl_Time.Text = "60";
             this.lbl_Time.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
@@ -61,7 +61,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(50, 50);
+            this.ClientSize = new System.Drawing.Size(40, 40);
             this.ControlBox = false;
             this.Controls.Add(this.lbl_Time);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);

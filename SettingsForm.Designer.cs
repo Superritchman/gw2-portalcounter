@@ -67,6 +67,7 @@
             // 
             resources.ApplyResources(this.cb_Language, "cb_Language");
             this.cb_Language.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_Language.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Language.DropDownWidth = 20;
             this.cb_Language.FormattingEnabled = true;
             this.cb_Language.Items.AddRange(new object[] {
