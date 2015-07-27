@@ -58,7 +58,6 @@ namespace PortalCounter
             if (nCode >= 0 && wParam == (IntPtr)WM_KEYDOWN)
             {
                 int vkCode = Marshal.ReadInt32(lParam);
-
                 if (hook && (Keys)vkCode == PortalCounter.Properties.Settings.Default.HotKey)
                 {
                     mForm.startTimer();
