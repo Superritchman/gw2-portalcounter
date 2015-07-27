@@ -1,58 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-
-namespace PortalCounter
-{
-    public partial class Settings : Form
-    {
-        private Keys newKey;
-
-        public Settings()
-        {
-            InitializeComponent();
-            Keys oldKey = PortalCounter.Properties.Settings.Default.HotKey;
-            this.lbl_DescOld.Text = "Old Key: " + normalizeKeyValue(oldKey);
+﻿namespace PortalCounter.Properties {
+    
+    
+    // Diese Klasse ermöglicht die Behandlung bestimmter Ereignisse der Einstellungsklasse:
+    //  Das SettingChanging-Ereignis wird ausgelöst, bevor der Wert einer Einstellung geändert wird.
+    //  Das PropertyChanged-Ereignis wird ausgelöst, nachdem der Wert einer Einstellung geändert wurde.
+    //  Das SettingsLoaded-Ereignis wird ausgelöst, nachdem die Einstellungswerte geladen wurden.
+    //  Das SettingsSaving-Ereignis wird ausgelöst, bevor die Einstellungswerte gespeichert werden.
+    internal sealed partial class Settings {
+        
+        public Settings() {
+            // // Heben Sie die  Auskommentierung der unten angezeigten Zeilen auf, um Ereignishandler zum Speichern und Ändern von Einstellungen hinzuzufügen:
+            //
+            // this.SettingChanging += this.SettingChangingEventHandler;
+            //
+            // this.SettingsSaving += this.SettingsSavingEventHandler;
+            //
         }
-
-        private void Settings_KeyUp(object sender, KeyEventArgs e)
-        {
-            newKey = e.KeyCode;
-            this.lbl_DescNew.Text = "New Key: " + normalizeKeyValue(newKey);
+        
+        private void SettingChangingEventHandler(object sender, System.Configuration.SettingChangingEventArgs e) {
+            // Fügen Sie hier Code zum Behandeln des SettingChangingEvent-Ereignisses hinzu.
         }
-
-        private void btn_Submit_Click(object sender, EventArgs e)
-        {
-            if (!newKey.Equals(Keys.None))
-                PortalCounter.Properties.Settings.Default.HotKey = newKey;
-            PortalCounter.Properties.Settings.Default.InspIX = this.cb_inspIX.Checked;
-            this.Close();
-        }
-
-        private String normalizeKeyValue(Keys key)
-        {
-            String normString = key.ToString();
-            if (!String.IsNullOrEmpty(normString) && normString.Any(char.IsDigit))
-            {                
-                normString = normString.TrimStart('D');
-            }
-
-            return normString;
-        }
-
-        private void Settings_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Program.hook = true;
-        }
-
-        private void Settings_Shown(object sender, EventArgs e)
-        {
-            Program.hook = false;
+        
+        private void SettingsSavingEventHandler(object sender, System.ComponentModel.CancelEventArgs e) {
+            // Fügen Sie hier Code zum Behandeln des SettingsSaving-Ereignisses hinzu.
         }
     }
 }

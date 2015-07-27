@@ -131,7 +131,7 @@ namespace PortalCounter
 
             if (e.Button == MouseButtons.Left && e.Clicks == 2)
             {
-                Settings formSettings = new Settings();
+                SettingsForm formSettings = new SettingsForm();
                 formSettings.ShowDialog(this);
             }
         }
