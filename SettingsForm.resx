@@ -181,7 +181,7 @@
     <value>0, 90</value>
   </data>
   <data name="btn_Submit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 35</value>
+    <value>227, 35</value>
   </data>
   <data name="btn_Submit.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -201,20 +201,23 @@
   <data name="&gt;&gt;btn_Submit.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="cb_inspIX.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
   <data name="cb_inspIX.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="cb_inspIX.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 64</value>
+    <value>12, 67</value>
   </data>
   <data name="cb_inspIX.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 17</value>
+    <value>98, 17</value>
   </data>
   <data name="cb_inspIX.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="cb_inspIX.Text" xml:space="preserve">
-    <value>Inspiration</value>
+    <value>Inspiration Trait</value>
   </data>
   <data name="&gt;&gt;cb_inspIX.Name" xml:space="preserve">
     <value>cb_inspIX</value>
@@ -227,6 +230,12 @@
   </data>
   <data name="&gt;&gt;cb_inspIX.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="cb_Language.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="cb_Language.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="cb_Language.Items" xml:space="preserve">
     <value>en</value>
@@ -241,13 +250,16 @@
     <value>fr</value>
   </data>
   <data name="cb_Language.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 6</value>
+    <value>173, 6</value>
   </data>
   <data name="cb_Language.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 21</value>
+    <value>42, 21</value>
   </data>
   <data name="cb_Language.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="cb_Language.Text" xml:space="preserve">
+    <value>en</value>
   </data>
   <data name="&gt;&gt;cb_Language.Name" xml:space="preserve">
     <value>cb_Language</value>
@@ -268,8 +280,8 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAs
-        CQAAAk1TRnQBSQFMAgEBBAEAAUwBAAFMAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAu
+        CQAAAk1TRnQBSQFMAgEBBAEAAVQBAAFUAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -297,18 +309,18 @@
         AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
         AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
         AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
-        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD//8A/wD/AP8ABQAQ+wH/
-        Ab0BhgNlAYsC+QG9BGUBrgH/ECUF/AHmBf8F+RD7Ab0BRwGUAYsCZQGLAvkBvQJlAYYBtQH0AZQQJQX8
-        AeYF/wX5EPsD4wGUAa4BZQGLAvkBvQFlAYsBBwG9AZQB4xAlBfwB5gX/BfkQ+wP/AhYBtQGLAvkBvQGu
-        AfABvQEWAZMBtBAyBfwB5gX/BfkQ+wTjAfkBlAEJAvkBvQHzAf8BFgGTAYsBZQL7ATcD+wE3CfsF/AHm
-        Bf8F+RAmBr0B/wL5Ab0C/wG9AfMCvAL7AaADMgGgCfsF/AHmBf8V+Qb/Ab0C+QdHAvsBwwEsATIBLAHD
-        CfsF/AHmBf8V+QdlAWYI+QL7ASYBLAEBAaABJgn7BfwB5gX/FfkB8gGGAbsBpgG0AWUBiwGGAf8H+QL7
-        AaABLAEWASkBoAn7BfwB5gX/FfkBiwG7AYYBtAGGAYsBpgGGAb0CRwUXAvsBMgEsASYBLAEyCfsF/AHm
-        Bf8F+RAfAbUBrgG0AYsBrgKGAWYC4wG9Av8B8gK1A/sDMgr7BfwB5gX/BfkQAAG1AbQCrgGLA4YE/wG9
-        AfABrgFlBPsBMgv7BfwB5gX/BfkQAAGuAbUBiwGuAYYBiwGGAWYE4wFHAZQB8wG1EDIF/AHmBf8F+RAA
-        AbwBiwG1AYYBrgOGBr0C/xAlBfwB5gX/BfkQAAGGAbwBhgG1AaYBrgFlAYYG/wG9Af8QJQX8AeYF/wX5
-        EAAB/wFlAbwBZQG1AWUBiwGGCP8QJQX8AeYF/wX5AUIBTQE+BwABPgMAASgDAAFAAwABIAMAAQEBAAEB
-        BgABARYAA///AAIACw==
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD//8A/wD/AP8ABQAB/wG9
+        AYYDZQGLAvkBvQRlAa4B/xD7ECUF/AHmBf8F+QG9AUcBlAGLAmUBiwL5Ab0CZQGGAbUB9AGUEPsQJQX8
+        AeYF/wX5A+MBlAGuAWUBiwL5Ab0BZQGLAQcBvQGUAeMQ+xAlBfwB5gX/BfkD/wIWAbUBiwL5Ab0BrgHw
+        Ab0BFgGTAbQQ+xAyBfwB5gX/BfkE4wH5AZQBCQL5Ab0B8wH/ARYBkwGLAWUS+wE3A/sBNwn7BfwB5gX/
+        BfkGvQH/AvkBvQL/Ab0B8wK8ECYC+wGgAzIBoAn7BfwB5gX/BfkG/wG9AvkHRxD5AvsBwwEsATIBLAHD
+        CfsF/AHmBf8F+QdlAWYY+QL7ASYBLAEBAaABJgn7BfwB5gX/BfkB8gGGAbsBpgG0AWUBiwGGAf8X+QL7
+        AaABLAEWASkBoAn7BfwB5gX/BfkBiwG7AYYBtAGGAYsBpgGGAb0CRwUXEPkC+wEyASwBJgEsATIJ+wX8
+        AeYF/wX5AbUBrgG0AYsBrgKGAWYC4wG9Av8B8gK1EB8D+wMyCvsF/AHmBf8F+QG1AbQCrgGLA4YE/wG9
+        AfABrgFlEAAE+wEyC/sF/AHmBf8F+QGuAbUBiwGuAYYBiwGGAWYE4wFHAZQB8wG1EAAQMgX8AeYF/wX5
+        AbwBiwG1AYYBrgOGBr0C/xAAECUF/AHmBf8F+QGGAbwBhgG1AaYBrgFlAYYG/wG9Af8QABAlBfwB5gX/
+        BfkB/wFlAbwBZQG1AWUBiwGGCP8QABAlBfwB5gX/BfkBQgFNAT4HAAE+AwABKAMAAUADAAEgAwABAQEA
+        AQEGAAEBFgAD//8AAgAL
 </value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -318,7 +330,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>221, 125</value>
+    <value>227, 125</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Settings</value>

@@ -65,14 +65,15 @@
             // 
             // cb_Language
             // 
+            resources.ApplyResources(this.cb_Language, "cb_Language");
             this.cb_Language.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_Language.DropDownWidth = 20;
             this.cb_Language.FormattingEnabled = true;
             this.cb_Language.Items.AddRange(new object[] {
             resources.GetString("cb_Language.Items"),
             resources.GetString("cb_Language.Items1"),
             resources.GetString("cb_Language.Items2"),
             resources.GetString("cb_Language.Items3")});
-            resources.ApplyResources(this.cb_Language, "cb_Language");
             this.cb_Language.Name = "cb_Language";
             this.cb_Language.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cb_Language_DrawItem);
             this.cb_Language.SelectedIndexChanged += new System.EventHandler(this.cb_Language_SelectedIndexChanged);
@@ -82,8 +83,8 @@
             // 
             this.il_Flags.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("il_Flags.ImageStream")));
             this.il_Flags.TransparentColor = System.Drawing.Color.Transparent;
-            this.il_Flags.Images.SetKeyName(0, "de");
-            this.il_Flags.Images.SetKeyName(1, "en");
+            this.il_Flags.Images.SetKeyName(0, "en");
+            this.il_Flags.Images.SetKeyName(1, "de");
             this.il_Flags.Images.SetKeyName(2, "es");
             this.il_Flags.Images.SetKeyName(3, "fr");
             // 

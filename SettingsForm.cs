@@ -30,10 +30,10 @@ namespace PortalCounter
             {
                 case "de":
                 case "fr":
-                case "es": 
+                case "es":
                     Properties.Settings.Default.Language = lang;
                     break;
-                default: 
+                default:
                     Properties.Settings.Default.Language = "en";
                     break;
             }
@@ -77,22 +77,7 @@ namespace PortalCounter
 
         private void cb_Language_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string langcode = this.cb_Language.SelectedItem.ToString();
-            Properties.Settings.Default.Language = langcode;
-            ci = new CultureInfo(langcode);
-            // translate Components            
-            foreach (Control c in this.Controls)
-            {
-                resources.ApplyResources(c, c.Name, ci);
-            }
-            // translate this form
-            resources.ApplyResources(this, "$this", ci);
 
-            // recreate oldKey value
-            Keys oldKey = Properties.Settings.Default.HotKey;
-            this.lbl_DescOld.Text += normalizeKeyValue(oldKey);
-            if (!newKey.Equals(Keys.None))
-                this.lbl_DescNew.Text += normalizeKeyValue(newKey);
         }
 
         private void cb_Language_DrawItem(object sender, DrawItemEventArgs e)
@@ -102,9 +87,11 @@ namespace PortalCounter
 
             if (e.Index >= 0)
             {
-                int index = il_Flags.Images.IndexOfKey(cb_Language.Items[e.Index].ToString());
-                this.il_Flags.Draw(e.Graphics, e.Bounds.Left, e.Bounds.Top, index);
+                int imgIndex = il_Flags.Images.IndexOfKey(cb_Language.Items[e.Index].ToString());
+                this.il_Flags.Draw(e.Graphics, e.Bounds.Location, imgIndex);
+                //e.Graphics.DrawImage(this.il_Flags.Images[imgIndex], e.Bounds.Left, e.Bounds.Top);
             }
+
         }
 
         private void cb_Language_DropDownClosed(object sender, EventArgs e)
