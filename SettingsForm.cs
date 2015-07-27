@@ -82,16 +82,26 @@ namespace PortalCounter
 
         private void cb_Language_DrawItem(object sender, DrawItemEventArgs e)
         {
+            //e.DrawBackground();
+            //e.DrawFocusRectangle();
+
+            //if (e.Index >= 0)
+            //{
+            //    int imgIndex = il_Flags.Images.IndexOfKey(cb_Language.Items[e.Index].ToString());
+            //    this.il_Flags.Draw(e.Graphics, e.Bounds.Location, imgIndex);
+            //    //e.Graphics.DrawImage(this.il_Flags.Images[imgIndex], e.Bounds.Left, e.Bounds.Top);
+            //}
+
             e.DrawBackground();
             e.DrawFocusRectangle();
 
             if (e.Index >= 0)
             {
-                int imgIndex = il_Flags.Images.IndexOfKey(cb_Language.Items[e.Index].ToString());
-                this.il_Flags.Draw(e.Graphics, e.Bounds.Location, imgIndex);
-                //e.Graphics.DrawImage(this.il_Flags.Images[imgIndex], e.Bounds.Left, e.Bounds.Top);
-            }
+                int index = il_Flags.Images.IndexOfKey(cb_Language.Items[e.Index].ToString());
+                e.Graphics.DrawImage(il_Flags.Images[index], e.Bounds.Left, e.Bounds.Top);
 
+                //this.il_Flags.Draw(e.Graphics, e.Bounds.Left, e.Bounds.Top, index);
+            }            
         }
 
         private void cb_Language_DropDownClosed(object sender, EventArgs e)

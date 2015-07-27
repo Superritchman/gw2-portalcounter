@@ -181,7 +181,7 @@
     <value>0, 90</value>
   </data>
   <data name="btn_Submit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 35</value>
+    <value>228, 35</value>
   </data>
   <data name="btn_Submit.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -201,9 +201,6 @@
   <data name="&gt;&gt;btn_Submit.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="cb_inspIX.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
   <data name="cb_inspIX.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -211,13 +208,13 @@
     <value>12, 67</value>
   </data>
   <data name="cb_inspIX.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 17</value>
+    <value>179, 17</value>
   </data>
   <data name="cb_inspIX.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="cb_inspIX.Text" xml:space="preserve">
-    <value>Inspiration Trait</value>
+    <value>Temporal Enchanter (Inspiration)</value>
   </data>
   <data name="&gt;&gt;cb_inspIX.Name" xml:space="preserve">
     <value>cb_inspIX</value>
@@ -250,16 +247,13 @@
     <value>fr</value>
   </data>
   <data name="cb_Language.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 6</value>
+    <value>174, 12</value>
   </data>
   <data name="cb_Language.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 21</value>
   </data>
   <data name="cb_Language.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
-  </data>
-  <data name="cb_Language.Text" xml:space="preserve">
-    <value>en</value>
   </data>
   <data name="&gt;&gt;cb_Language.Name" xml:space="preserve">
     <value>cb_Language</value>
@@ -330,7 +324,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>227, 125</value>
+    <value>228, 125</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Settings</value>
