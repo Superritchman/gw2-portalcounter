@@ -19,5 +19,5 @@ After you placed your Portal Exit, the timer will restart with 10 (or 12) second
 <li>Updated descriptions to match with the latest trait-patch</li>
 </ul>
 
-You find a compiled version in sub-folder 'Release' (or take this link)<br>
-https://github.com/Superritchman/gw2-portalcounter/raw/master/Release/PortalCounter.exe
+Here you will find compiled binaries<br>
+https://github.com/Superritchman/gw2-portalcounter/releases/tag/v1.1
