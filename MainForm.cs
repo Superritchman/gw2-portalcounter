@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using Gw2Mem;
 
 namespace PortalCounter
 {
@@ -40,9 +41,13 @@ namespace PortalCounter
         private int timerstate = T_TIMER_STOPPED;
         private int tickTimer = S_LONGTIME;        
 
+        // mumble
+        private MumbleLink ml;
+        private MumbleLink.Coordinate start_position;
+
         public MainForm()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         public void startTimer()
@@ -52,7 +57,20 @@ namespace PortalCounter
                 case T_TIMER_STOPPED:    // first portal
                     String winTitle = GetActiveWindowTitle();
                     if ("Guild Wars 2".Equals(winTitle))
-                    {                        
+                    {
+                        try { 
+                            if (ml != null)
+                                ml.Dispose();
+                            ml = new MumbleLink();
+                            start_position = ml.GetCoordinates();
+                            ti_Update.Start();
+                        }
+                        catch (Exception ex)
+                        {
+                            ti_Update.Stop();
+                            lbl_Distance.Text = "Can't read Coords!";
+                        }
+
                         timerstate = T_LONG_TIMER;
                         this.ti_CountDown.Stop();
                         tickTimer = S_LONGTIME;
@@ -64,11 +82,17 @@ namespace PortalCounter
                     this.ti_CountDown.Stop();
                     tickTimer = PortalCounter.Properties.Settings.Default.InspIX ? 12 : 10;
                     this.ti_CountDown.Start();
+
+                    lbl_Distance.Text = "5000";
+                    ti_Update.Stop();
                     break;
                 default:    // reset
                     timerstate = T_TIMER_STOPPED;
                     this.ti_CountDown.Stop();
                     tickTimer = S_LONGTIME;
+
+                    lbl_Distance.Text = "5000";
+                    ti_Update.Stop();
                     break;
             }
             updateLabel();
@@ -144,13 +168,49 @@ namespace PortalCounter
 
         private void MainForm_Activated(object sender, EventArgs e)
         {
-            this.lbl_Time.BackColor = Color.LightGray;            
+            this.BackColor = Color.LightGray;            
         }
 
         private void MainForm_Deactivate(object sender, EventArgs e)
         {
-            this.lbl_Time.BackColor = Color.Black;
+            this.BackColor = Color.Black;
             this.BringToFront();
+        }
+
+        private void ti_Update_Tick(object sender, EventArgs e)
+        {            
+            MumbleLink.Coordinate coord = ml.GetCoordinates();
+
+            lbl_Distance.Text = (5000 - (int)(distance(start_position, coord) + 1.5)).ToString();
+
+            //ml.Dispose();
+
+            if (start_position.map_id != coord.map_id)
+            {
+                lbl_Distance.Text = "5000";
+                ti_Update.Stop();
+            }
+        }
+
+        private double distance(MumbleLink.Coordinate p, MumbleLink.Coordinate q)
+        {
+            double distance = 0;
+
+            double sum = Math.Pow((q.x - p.x), 2) + Math.Pow((q.y - p.y), 2) + Math.Pow((q.z - p.z), 2);
+            distance = Math.Sqrt(sum);
+
+            return distance;
+        }
+
+        private void lbl_Distance_TextChanged(object sender, EventArgs e)
+        {
+            int valDis = Convert.ToInt32(this.lbl_Distance.Text);
+            if (valDis < 0)
+                lbl_Distance.ForeColor = Color.OrangeRed;
+            else if (valDis < 500)
+                lbl_Distance.ForeColor = Color.ForestGreen;
+            else
+                lbl_Distance.ForeColor = Color.White;
         }
     }
 }
