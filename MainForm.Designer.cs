@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.lbl_Time = new System.Windows.Forms.Label();
             this.ti_CountDown = new System.Windows.Forms.Timer(this.components);
+            this.lbl_Distance = new System.Windows.Forms.Label();
+            this.ti_Update = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lbl_Time
@@ -43,7 +45,7 @@
             this.lbl_Time.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Time.Name = "lbl_Time";
             this.lbl_Time.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_Time.Size = new System.Drawing.Size(40, 30);
+            this.lbl_Time.Size = new System.Drawing.Size(47, 31);
             this.lbl_Time.TabIndex = 0;
             this.lbl_Time.Text = "60";
             this.lbl_Time.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
@@ -54,6 +56,23 @@
             this.ti_CountDown.Interval = 1000;
             this.ti_CountDown.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lbl_Distance
+            // 
+            this.lbl_Distance.AutoSize = true;
+            this.lbl_Distance.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Distance.Location = new System.Drawing.Point(12, 24);
+            this.lbl_Distance.Name = "lbl_Distance";
+            this.lbl_Distance.Size = new System.Drawing.Size(31, 15);
+            this.lbl_Distance.TabIndex = 1;
+            this.lbl_Distance.Text = "5000";
+            this.lbl_Distance.TextChanged += new System.EventHandler(this.lbl_Distance_TextChanged);
+            this.lbl_Distance.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
+            this.lbl_Distance.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseUp);
+            // 
+            // ti_Update
+            // 
+            this.ti_Update.Tick += new System.EventHandler(this.ti_Update_Tick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -61,8 +80,9 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(40, 40);
+            this.ClientSize = new System.Drawing.Size(47, 48);
             this.ControlBox = false;
+            this.Controls.Add(this.lbl_Distance);
             this.Controls.Add(this.lbl_Time);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.ForeColor = System.Drawing.Color.White;
@@ -82,6 +102,7 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseUp);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -89,6 +110,8 @@
 
         private System.Windows.Forms.Label lbl_Time;
         private System.Windows.Forms.Timer ti_CountDown;
+        private System.Windows.Forms.Label lbl_Distance;
+        private System.Windows.Forms.Timer ti_Update;
     }
 }
 
