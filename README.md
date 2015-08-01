@@ -17,6 +17,7 @@ After you placed your Portal Exit, the timer will restart with 10 (or 12) second
 ## Changes
 <ul>
 <li>Updated descriptions to match with the latest trait-patch</li>
+<li>Added language support for english, german, spanish and french.
 </ul>
 
 Here you will find compiled binaries<br>
