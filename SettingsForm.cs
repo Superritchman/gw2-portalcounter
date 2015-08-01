@@ -38,6 +38,8 @@ namespace PortalCounter
                     break;
             }
             this.cb_Language.SelectedItem = Properties.Settings.Default.Language;
+
+            this.cb_inspIX.Checked = Properties.Settings.Default.InspIX;
         }
 
         private String normalizeKeyValue(Keys key)
