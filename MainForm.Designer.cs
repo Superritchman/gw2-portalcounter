@@ -61,10 +61,12 @@
             this.lbl_Distance.AutoSize = true;
             this.lbl_Distance.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Distance.Location = new System.Drawing.Point(12, 24);
+            this.lbl_Distance.MinimumSize = new System.Drawing.Size(30, 0);
             this.lbl_Distance.Name = "lbl_Distance";
             this.lbl_Distance.Size = new System.Drawing.Size(31, 15);
             this.lbl_Distance.TabIndex = 1;
             this.lbl_Distance.Text = "5000";
+            this.lbl_Distance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbl_Distance.TextChanged += new System.EventHandler(this.lbl_Distance_TextChanged);
             this.lbl_Distance.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.lbl_Distance.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseUp);

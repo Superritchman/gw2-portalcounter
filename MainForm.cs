@@ -58,9 +58,12 @@ namespace PortalCounter
                     String winTitle = GetActiveWindowTitle();
                     if ("Guild Wars 2".Equals(winTitle))
                     {
+                        timerstate = T_LONG_TIMER;
+                        this.ti_CountDown.Stop();
+                        tickTimer = S_LONGTIME;
+                        this.ti_CountDown.Start();
+
                         try { 
-                            if (ml != null)
-                                ml.Dispose();
                             ml = new MumbleLink();
                             start_position = ml.GetCoordinates();
                             ti_Update.Start();
@@ -68,13 +71,9 @@ namespace PortalCounter
                         catch (Exception ex)
                         {
                             ti_Update.Stop();
-                            lbl_Distance.Text = "Can't read Coords!";
+                            lbl_Distance.Text = "ERROR";
+                            Console.WriteLine(ex);
                         }
-
-                        timerstate = T_LONG_TIMER;
-                        this.ti_CountDown.Stop();
-                        tickTimer = S_LONGTIME;
-                        this.ti_CountDown.Start();
                     }
                     break;
                 case T_LONG_TIMER:     // second portal (open to port)
@@ -182,8 +181,6 @@ namespace PortalCounter
             MumbleLink.Coordinate coord = ml.GetCoordinates();
 
             lbl_Distance.Text = (5000 - (int)(distance(start_position, coord) + 1.5)).ToString();
-
-            //ml.Dispose();
 
             if (start_position.map_id != coord.map_id)
             {

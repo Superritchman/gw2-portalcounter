@@ -51,7 +51,7 @@ namespace PortalCounter
                 if (store != null)
                 {
                     rs = new ResourceSet(store);
-                    //save for later.
+                    //save for later.                    
                     AddResourceSet(this.ResourceSets, culture, ref rs);
                 }
                 else
