@@ -56,7 +56,7 @@ namespace PortalCounter
             {
                 case T_TIMER_STOPPED:    // first portal
                     String winTitle = GetActiveWindowTitle();
-                    if ("Guild Wars 2".Equals(winTitle))
+                    if (true || "Guild Wars 2".Equals(winTitle))
                     {
                         timerstate = T_LONG_TIMER;
                         this.ti_CountDown.Stop();

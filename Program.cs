@@ -34,7 +34,7 @@ namespace PortalCounter
 
         [STAThread]
         static void Main()
-        {            
+        {
             _hookID = SetHook(_proc);
             Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
@@ -57,8 +57,9 @@ namespace PortalCounter
         {
             if (nCode >= 0 && wParam == (IntPtr)WM_KEYDOWN)
             {
-                int vkCode = Marshal.ReadInt32(lParam);
-                if (hook && (Keys)vkCode == PortalCounter.Properties.Settings.Default.HotKey)
+                Keys vkCode = (Keys)Marshal.ReadInt32(lParam);
+
+                if (hook && (Keys)vkCode == PortalCounter.Properties.Settings.Default.HotKey && Control.ModifierKeys.Equals(Properties.Settings.Default.Modifier))
                 {
                     mForm.startTimer();
                 }
