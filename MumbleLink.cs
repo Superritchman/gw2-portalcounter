@@ -4,10 +4,10 @@ using System.IO.MemoryMappedFiles;
 
 namespace Gw2Mem
 {
-    class MumbleLink
+    class MumbleLink : IDisposable
     {
         private const string NAME = "MumbleLink";
-        private const float METER_TO_INCH = 39.37001f;
+        private const float METER_TO_INCH = 39.3701f;
 
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
         public struct LinkedMem
@@ -72,7 +72,7 @@ namespace Gw2Mem
 
         public Coordinate GetCoordinates()
         {
-            LinkedMem l = Read();            
+            LinkedMem l = Read();
 
             /* 
              * Note that the mumble coordinates differ from the actual in-game coordinates.
@@ -91,6 +91,18 @@ namespace Gw2Mem
             coord.map_id = BitConverter.ToInt32(l.context, 28);
 
             return coord;
+        }
+
+        public void Dispose()
+        {
+            if (stream != null)
+                stream.Dispose();
+            if (bufferHandle != null)
+                bufferHandle.Free();
+            if (mmf != null)
+            {
+                mmf.Dispose();
+            }
         }
     }
 }

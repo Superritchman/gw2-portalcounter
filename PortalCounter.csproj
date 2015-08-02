@@ -133,8 +133,6 @@
     <Content Include="Icon.ico" />
     <None Include="res\ES.gif" />
     <None Include="res\DE.gif" />
-    <None Include="res\US.gif" />
-    <None Include="res\GB.gif" />
     <None Include="res\FR.gif" />
   </ItemGroup>
   <ItemGroup>
