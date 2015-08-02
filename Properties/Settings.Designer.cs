@@ -58,5 +58,17 @@ namespace PortalCounter.Properties {
                 this["Language"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("None")]
+        public global::System.Windows.Forms.Keys Modifier {
+            get {
+                return ((global::System.Windows.Forms.Keys)(this["Modifier"]));
+            }
+            set {
+                this["Modifier"] = value;
+            }
+        }
     }
 }
