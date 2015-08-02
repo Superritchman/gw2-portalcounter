@@ -64,8 +64,6 @@ namespace PortalCounter
                         this.ti_CountDown.Start();
 
                         try {
-                            if (ml != null)
-                                ml.Dispose();
                             ml = new MumbleLink();
                             start_position = ml.GetCoordinates();
                             ti_Update.Start();
