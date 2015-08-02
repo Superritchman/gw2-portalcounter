@@ -56,14 +56,16 @@ namespace PortalCounter
             {
                 case T_TIMER_STOPPED:    // first portal
                     String winTitle = GetActiveWindowTitle();
-                    if (true || "Guild Wars 2".Equals(winTitle))
+                    if ("Guild Wars 2".Equals(winTitle))
                     {
                         timerstate = T_LONG_TIMER;
                         this.ti_CountDown.Stop();
                         tickTimer = S_LONGTIME;
                         this.ti_CountDown.Start();
 
-                        try { 
+                        try {
+                            if (ml != null)
+                                ml.Dispose();
                             ml = new MumbleLink();
                             start_position = ml.GetCoordinates();
                             ti_Update.Start();
@@ -179,6 +181,8 @@ namespace PortalCounter
         private void ti_Update_Tick(object sender, EventArgs e)
         {            
             MumbleLink.Coordinate coord = ml.GetCoordinates();
+
+            Console.WriteLine(start_position.x + " " + start_position.y + " " + start_position.z);
 
             lbl_Distance.Text = (5000 - (int)(distance(start_position, coord) + 1.5)).ToString();
 
