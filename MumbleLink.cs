@@ -56,8 +56,8 @@ namespace Gw2Mem
         {
             MEM_SIZE = Marshal.SizeOf(typeof(LinkedMem));
 
-            mmf = MemoryMappedFile.CreateOrOpen(NAME, MEM_SIZE, MemoryMappedFileAccess.Read);
-            stream = mmf.CreateViewStream(0, MEM_SIZE, MemoryMappedFileAccess.Read);
+            mmf = MemoryMappedFile.CreateOrOpen(NAME, MEM_SIZE);
+            stream = mmf.CreateViewStream(0, MEM_SIZE);
 
             buffer = new byte[MEM_SIZE];
             bufferHandle = GCHandle.Alloc(buffer, GCHandleType.Pinned);
