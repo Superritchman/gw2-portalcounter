@@ -70,5 +70,17 @@ namespace PortalCounter.Properties {
                 this["Modifier"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ProtectChat {
+            get {
+                return ((bool)(this["ProtectChat"]));
+            }
+            set {
+                this["ProtectChat"] = value;
+            }
+        }
     }
 }

@@ -1,10 +1,10 @@
 using System;
-using System.Runtime.InteropServices;
 using System.IO.MemoryMappedFiles;
+using System.Runtime.InteropServices;
 
 namespace Gw2Mem
 {
-    class MumbleLink : IDisposable
+    class MumbleLink
     {
         private const string NAME = "MumbleLink";
         private const float METER_TO_INCH = 39.3701f;
@@ -93,16 +93,16 @@ namespace Gw2Mem
             return coord;
         }
 
-        public void Dispose()
-        {
-            if (stream != null)
-                stream.Dispose();
-            if (bufferHandle != null)
-                bufferHandle.Free();
-            if (mmf != null)
-            {
-                mmf.Dispose();
-            }
-        }
+        //public void Dispose()
+        //{
+        //    if (stream != null)
+        //        stream.Dispose();
+        //    if (bufferHandle != null)
+        //        bufferHandle.Free();
+        //    if (mmf != null)
+        //    {
+        //        mmf.Dispose();
+        //    }
+        //}
     }
 }

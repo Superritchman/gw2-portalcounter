@@ -36,6 +36,7 @@
             this.cb_inspIX = new System.Windows.Forms.CheckBox();
             this.cb_Language = new System.Windows.Forms.ComboBox();
             this.il_Flags = new System.Windows.Forms.ImageList(this.components);
+            this.cb_ProtectChat = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lbl_DescOld
@@ -90,11 +91,18 @@
             this.il_Flags.Images.SetKeyName(2, "es");
             this.il_Flags.Images.SetKeyName(3, "fr");
             // 
+            // cb_ProtectChat
+            // 
+            resources.ApplyResources(this.cb_ProtectChat, "cb_ProtectChat");
+            this.cb_ProtectChat.Name = "cb_ProtectChat";
+            this.cb_ProtectChat.UseVisualStyleBackColor = true;
+            // 
             // SettingsForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+            this.Controls.Add(this.cb_ProtectChat);
             this.Controls.Add(this.cb_Language);
             this.Controls.Add(this.cb_inspIX);
             this.Controls.Add(this.btn_Submit);
@@ -123,5 +131,6 @@
         private System.Windows.Forms.CheckBox cb_inspIX;
         private System.Windows.Forms.ComboBox cb_Language;
         private System.Windows.Forms.ImageList il_Flags;
+        private System.Windows.Forms.CheckBox cb_ProtectChat;
     }
 }
