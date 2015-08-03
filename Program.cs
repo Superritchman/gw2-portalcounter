@@ -28,6 +28,7 @@ namespace PortalCounter
         private const int WM_KEYDOWN = 0x0100;
         private static LowLevelKeyboardProc _proc = HookCallback;
         private static IntPtr _hookID = IntPtr.Zero;
+        private static bool chatactive = false;
 
         private static MainForm mForm = new MainForm();
         public static Boolean hook = true;
@@ -59,11 +60,18 @@ namespace PortalCounter
             {
                 Keys vkCode = (Keys)Marshal.ReadInt32(lParam);
 
-                if (hook && (Keys)vkCode == PortalCounter.Properties.Settings.Default.HotKey && Control.ModifierKeys.Equals(Properties.Settings.Default.Modifier))
+                if (hook && Properties.Settings.Default.ProtectChat && vkCode == Keys.Enter && PortalCounter.Properties.Settings.Default.HotKey != Keys.Enter)
+                {
+                    chatactive = !chatactive;
+                    mForm.BackColor = chatactive ? System.Drawing.Color.OrangeRed : System.Drawing.Color.Black;
+                }
+
+                if (!chatactive && hook && vkCode.Equals(PortalCounter.Properties.Settings.Default.HotKey) && Control.ModifierKeys == Properties.Settings.Default.Modifier)
                 {
                     mForm.startTimer();
                 }
             }
+
             return CallNextHookEx(_hookID, nCode, wParam, lParam);
         }
     }

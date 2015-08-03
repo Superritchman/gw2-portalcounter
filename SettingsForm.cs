@@ -41,6 +41,7 @@ namespace PortalCounter
             this.cb_Language.SelectedItem = Properties.Settings.Default.Language;
 
             this.cb_inspIX.Checked = Properties.Settings.Default.InspIX;
+            this.cb_ProtectChat.Checked = Properties.Settings.Default.ProtectChat;
         }
 
         private String normalizeKeyValue(Keys key)
@@ -88,6 +89,7 @@ namespace PortalCounter
                 Properties.Settings.Default.Modifier = modifier;
 
             Properties.Settings.Default.InspIX = this.cb_inspIX.Checked;
+            Properties.Settings.Default.ProtectChat = this.cb_ProtectChat.Checked;
             this.Close();
         }
 
@@ -150,5 +152,6 @@ namespace PortalCounter
             // prevent language-change on hotkey-changing
             this.lbl_DescOld.Focus();
         }
+
     }
 }

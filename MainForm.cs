@@ -47,7 +47,8 @@ namespace PortalCounter
 
         public MainForm()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            ml = new MumbleLink();
         }
 
         public void startTimer()
@@ -64,7 +65,6 @@ namespace PortalCounter
                         this.ti_CountDown.Start();
 
                         try {
-                            ml = new MumbleLink();
                             start_position = ml.GetCoordinates();
                             ti_Update.Start();
                         }
@@ -180,9 +180,8 @@ namespace PortalCounter
         {            
             MumbleLink.Coordinate coord = ml.GetCoordinates();
 
-            Console.WriteLine(start_position.x + " " + start_position.y + " " + start_position.z);
-
-            lbl_Distance.Text = (5000 - (int)(distance(start_position, coord) + 1.5)).ToString();
+            int diff = 5000 - (int)(distance(start_position, coord) + 1.5);
+            lbl_Distance.Text = diff.ToString();
 
             if (start_position.map_id != coord.map_id)
             {
