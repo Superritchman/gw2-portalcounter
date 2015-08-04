@@ -15,9 +15,16 @@ Also there is an range-indicator. So you will see how far you can go, before run
 <li>Right-Click on the time to exit PortalCounter
 </ol>
 
+## Color-legend
+<ul>
+<li>Grey: Just highlighting the window for easier dragging it around</li>
+<li>Red-Orange: Chatmode activated, even if you hit the hotkey(s), the countdown won't start or pause.<br>
+Press 'Enter' to enter/leave the chatmode. (can be disabled in settings).</li>
+
 ## Changes
 <ul>
-<li><b>added chat-protection (hotkey don't trigger if you open the chat with 'Enter'))</b></li>
+<li><b>fixed bug with modifier-keys</b></li>
+<li>added chat-protection (hotkey don't trigger if you open the chat with 'Enter'))</li>
 <li>fixed bug where the range wasn't calculated</li>
 <li>Added modifier-key support (alt, shift, ctrl)</li>
 <li>Updated descriptions to match with the latest trait-patch</li>

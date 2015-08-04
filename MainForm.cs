@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using Gw2Mem;
+using System;
 using System.Drawing;
-using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
-
-using System.Diagnostics;
-using System.Runtime.InteropServices;
-using Gw2Mem;
 
 namespace PortalCounter
 {
@@ -167,12 +161,14 @@ namespace PortalCounter
 
         private void MainForm_Activated(object sender, EventArgs e)
         {
-            this.BackColor = Color.LightGray;            
+            if(this.BackColor == Color.Black)
+                this.BackColor = Color.LightGray;
         }
 
         private void MainForm_Deactivate(object sender, EventArgs e)
         {
-            this.BackColor = Color.Black;
+            if(this.BackColor == Color.LightGray)
+                this.BackColor = Color.Black;
             this.BringToFront();
         }
 
