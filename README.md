@@ -20,6 +20,7 @@ Also there is an range-indicator. So you will see how far you can go, before run
 <li>Grey: Just highlighting the window for easier dragging it around</li>
 <li>Red-Orange: Chatmode activated, even if you hit the hotkey(s), the countdown won't start or pause.<br>
 Press 'Enter' to enter/leave the chatmode. (can be disabled in settings).</li>
+</ul>
 
 ## Changes
 <ul>
